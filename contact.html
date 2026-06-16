@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact AAMEX | Strength to Excel</title>
+    <meta
+      name="description"
+      content="Contact AAMEX and Bethel Agencies for product enquiries, battery matching, and support on shared catalog ranges."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="contact">
+    <header class="site-header" data-site-header></header>
+
+    <main>
+      <section class="hero hero--inner" data-hero-slider></section>
+
+      <section class="section">
+        <div class="container contact-layout">
+          <article class="panel contact-card" data-reveal>
+            <p class="section-label">Office details</p>
+            <h2>Bethel Agencies</h2>
+            <p>Vetticode, Kattanam, Kayamkulam - 690503</p>
+            <div class="contact-stack">
+              <a href="tel:+919947536724">+91 99475 36724</a>
+              <a href="tel:+919746665022">+91 97466 65022</a>
+              <a href="tel:+919400124729">+91 94001 24729</a>
+              <a href="https://www.aamex.in" target="_blank" rel="noreferrer">www.aamex.in</a>
+            </div>
+            <div class="contact-card__meta">
+              <span>Inverter and UPS batteries</span>
+              <span>Solar ranges</span>
+              <span>Automotive and bike batteries</span>
+            </div>
+          </article>
+
+          <article class="panel form-card" data-reveal id="contact-form">
+            <p class="section-label">Enquiry form</p>
+            <h2>Start a product conversation</h2>
+            <form class="enquiry-form" data-demo-form>
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input type="tel" name="phone" placeholder="Your phone number" required />
+              </label>
+              <label>
+                <span>Product interest</span>
+                <select name="interest" required>
+                  <option value="">Select a range</option>
+                  <option>UPS & inverter battery</option>
+                  <option>Solar battery</option>
+                  <option>Smart car battery</option>
+                  <option>Automotive battery</option>
+                  <option>Bike battery</option>
+                  <option>Inverter unit</option>
+                </select>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us the application, backup need, or model range you are looking for."
+                ></textarea>
+              </label>
+              <button class="button" type="submit">Submit enquiry</button>
+              <p class="form-message" data-form-message></p>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--muted">
+        <div class="container info-grid info-grid--three">
+          <article class="info-card panel" data-reveal>
+            <p class="info-card__count">01</p>
+            <h3>Product matching</h3>
+            <p>Get help narrowing the right range by use case, capacity, and warranty expectations.</p>
+          </article>
+          <article class="info-card panel" data-reveal>
+            <p class="info-card__count">02</p>
+            <h3>Dealer conversation</h3>
+            <p>Use the product details on the site as a starting point for your sales discussion.</p>
+          </article>
+          <article class="info-card panel" data-reveal>
+            <p class="info-card__count">03</p>
+            <h3>Fast reach-out</h3>
+            <p>Phone-first contact details are highlighted so visitors can move quickly from browsing to enquiry.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div data-site-footer></div>
+      <div class="container site-footer__bottom">
+        <p>© <span data-current-year></span> AAMEX. Contact page built around the shared phone and address details | Developed by Hostlane Technolab </p>
+      </div>
+    </footer>
+
+    <script defer src="./content.js"></script>
+    <script defer src="./main.js"></script>
+  </body>
+</html>

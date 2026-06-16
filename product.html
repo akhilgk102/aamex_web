@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAMEX Products | Strength to Excel</title>
+    <meta
+      name="description"
+      content="Explore AAMEX tubular, solar, smart car, automotive, and bike battery ranges with catalog-based warranty and capacity details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="product">
+    <header class="site-header" data-site-header></header>
+
+    <main>
+      <section class="hero hero--inner" data-hero-slider></section>
+
+      <section class="section section--muted">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="section-label">Spotlight products</p>
+            <h2>Core ranges translated into a cleaner web catalog.</h2>
+          </div>
+          <div class="family-grid family-grid--wide" data-product-families></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container table-layout">
+          <article class="table-card panel" data-reveal>
+            <div class="table-card__header">
+              <p class="section-label">Tubular battery models</p>
+              <h2>Inverter and solar focused ranges</h2>
+            </div>
+            <div class="table-wrap">
+              <table class="catalog-table">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Capacity</th>
+                    <th>Warranty</th>
+                    <th>Pro-rata</th>
+                  </tr>
+                </thead>
+                <tbody data-table="tubular"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <div class="table-stack">
+            <article class="table-card panel" data-reveal>
+              <div class="table-card__header">
+                <p class="section-label">Automotive batteries</p>
+                <h2>Passenger and vehicle-focused options</h2>
+              </div>
+              <div class="table-wrap">
+                <table class="catalog-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Capacity</th>
+                      <th>Warranty</th>
+                      <th>Pro-rata</th>
+                    </tr>
+                  </thead>
+                  <tbody data-table="automotive"></tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-card panel" data-reveal>
+              <div class="table-card__header">
+                <p class="section-label">Bike batteries</p>
+                <h2>Compact two-wheeler sizes</h2>
+              </div>
+              <div class="table-wrap">
+                <table class="catalog-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Capacity</th>
+                      <th>Warranty</th>
+                      <th>Pro-rata</th>
+                    </tr>
+                  </thead>
+                  <tbody data-table="bike"></tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="section-label">Model visuals</p>
+            <h2>Every listed model now shows a real product image.</h2>
+          </div>
+
+          <div class="model-groups">
+            <section class="model-group panel" data-reveal>
+              <div class="model-group__heading">
+                <p class="section-label">Tubular lineup</p>
+                <h3>Inverter and solar models</h3>
+              </div>
+              <div class="model-grid" data-model-grid="tubular"></div>
+            </section>
+
+            <section class="model-group panel" data-reveal>
+              <div class="model-group__heading">
+                <p class="section-label">Automotive lineup</p>
+                <h3>Passenger battery range</h3>
+              </div>
+              <div class="model-grid" data-model-grid="automotive"></div>
+            </section>
+
+            <section class="model-group panel" data-reveal>
+              <div class="model-group__heading">
+                <p class="section-label">Bike lineup</p>
+                <h3>Compact two-wheeler battery range</h3>
+              </div>
+              <div class="model-grid" data-model-grid="bike"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="section-label">Banner gallery</p>
+            <h2>Custom campaign visuals created for the website.</h2>
+          </div>
+          <div class="gallery-grid" data-product-gallery></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container cta-banner panel" data-reveal>
+          <div>
+            <p class="section-label">Next step</p>
+            <h2>Need help matching the right capacity, warranty range, or usage type?</h2>
+          </div>
+          <div class="cta-banner__actions">
+            <a class="button" href="./contact.html">Send an enquiry</a>
+            <a class="button button--ghost" href="./about.html">Learn about AAMEX</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div data-site-footer></div>
+      <div class="container site-footer__bottom">
+        <p>© <span data-current-year></span> AAMEX. Product data organized from the shared catalog details | Developed by Hostlane Technolab </p>
+      </div>
+    </footer>
+
+    <script defer src="./content.js"></script>
+    <script defer src="./main.js"></script>
+  </body>
+</html>
