@@ -49,7 +49,7 @@ function renderHeader() {
         </button>
         <nav class="site-nav" id="site-nav-panel" aria-label="Primary">
           ${links}
-          <a class="button button--small" href="./contact.html">Enquire Now</a>
+          <a class="button " href="./contact.html">Enquire Now</a>
         </nav>
       </div>
     </div>
