@@ -3,7 +3,7 @@ window.AAMEX_CONTENT = {
   brand: "AAMEX",
   tagline: "Strength to Excel",
   description:
-    "AAMEX delivers dependable lead-acid battery solutions for inverter, solar, automotive, bike, household, and office applications.",
+    "AAMEX® delivers dependable lead-acid battery solutions for inverter, solar, automotive, bike, household, and office applications.",
   contact: {
     distributor: "Bethel Agencies",
     address: "Vetticode, Kattanam, Kayamkulam - 690503",
@@ -17,11 +17,11 @@ window.AAMEX_CONTENT = {
   home: [
     {
       label: "Power Backup",
-      title: "Strength to Excel with dependable AAMEX battery solutions.",
+      title: "Strength to Excel with dependable AAMEX® battery solutions.",
       lead:
-        "AAMEX brings together tubular inverter batteries, smart car battery technology, solar-ready options, and supporting inverter products designed for reliable use across homes, shops, offices, and high-use environments.",
+        "AAMEX® brings together tubular inverter batteries, smart car battery technology, solar-ready options, and supporting inverter products designed for reliable use across homes, shops, offices, and high-use environments.",
       image: "./site-images/hero-banner-logo.png",
-      alt: "AAMEX home hero banner",
+      alt: "AAMEX® home hero banner",
       actions: [
         { label: "Explore Products", href: "./product.html" },
         { label: "Talk to Sales", href: "./contact.html", variant: "ghost" },
@@ -36,12 +36,12 @@ window.AAMEX_CONTENT = {
       label: "Product Range",
       title: "Power ranges built to cover everyday backup, charging, and mobility needs.",
       lead:
-        "From inverter batteries to solar-ready options and compact vehicle formats, the AAMEX lineup is shaped to match practical usage with strong output, stable charging, and low-maintenance ownership.",
+        "From inverter batteries to solar-ready options and compact vehicle formats, the AAMEX® lineup is shaped to match practical usage with strong output, stable charging, and low-maintenance ownership.",
       image: "./site-images/product-banner-logo.png",
-      alt: "AAMEX product range banner",
+      alt: "AAMEX® product range banner",
       actions: [
         { label: "See Product Range", href: "./product.html" },
-        { label: "Learn About AAMEX", href: "./about.html", variant: "ghost" },
+        { label: "Learn About AAMEX®", href: "./about.html", variant: "ghost" },
       ],
       facts: [
         "Focused product families for household and commercial backup",
@@ -53,9 +53,9 @@ window.AAMEX_CONTENT = {
       label: "Sales Support",
       title: "Get product matching, follow-up, and quick battery guidance from one contact point.",
       lead:
-        "Bethel Agencies supports the AAMEX product story with direct phone-first enquiry handling, helping customers narrow the right battery family, capacity, and use case before purchase.",
+        "Bethel Agencies supports the AAMEX® product story with direct phone-first enquiry handling, helping customers narrow the right battery family, capacity, and use case before purchase.",
       image: "./site-images/contact-banner-logo.png",
-      alt: "AAMEX contact support banner",
+      alt: "AAMEX® contact support banner",
       actions: [
         { label: "Contact Bethel Agencies", href: "./contact.html" },
         { label: "View Catalog", href: "./product.html", variant: "ghost" },
@@ -72,9 +72,9 @@ window.AAMEX_CONTENT = {
       label: "About Us",
       title: "A battery range positioned around trust, performance, and dependable backup life.",
       lead:
-        "The shared product catalog describes AAMEX as a committed battery supplier focused on delivering excellent quality tubular batteries while meeting household, office, inverter, and solar energy requirements.",
+        "The shared product catalog describes AAMEX® as a committed battery supplier focused on delivering excellent quality tubular batteries while meeting household, office, inverter, and solar energy requirements.",
       image: "./site-images/about-banner-logo.png",
-      alt: "AAMEX about banner",
+      alt: "AAMEX® about banner",
       facts: [
         "Lead-acid battery solutions for multiple use cases",
         "Low-maintenance engineering emphasis",
@@ -87,7 +87,7 @@ window.AAMEX_CONTENT = {
       lead:
         "Across the brand material, the recurring value points are strong build quality, quick charging response, dependable backup delivery, and durable product construction for Indian conditions.",
       image: "./site-images/hero-banner-logo.png",
-      alt: "AAMEX engineering banner",
+      alt: "AAMEX® engineering banner",
       facts: [
         "Heavy-duty tubular battery design",
         "Reliable charging and everyday service life",
@@ -96,11 +96,11 @@ window.AAMEX_CONTENT = {
     },
     {
       label: "Distribution",
-      title: "AAMEX combines product confidence with local dealer support and a broad application story.",
+      title: "AAMEX® combines product confidence with local dealer support and a broad application story.",
       lead:
-        "The website positions AAMEX as a practical supplier for inverter, solar, automotive, and bike batteries, supported by dealer contact, brochure visuals, and model-level catalog references.",
+        "The website positions AAMEX® as a practical supplier for inverter, solar, automotive, and bike batteries, supported by dealer contact, brochure visuals, and model-level catalog references.",
       image: "./site-images/product-banner-logo.png",
-      alt: "AAMEX product distribution banner",
+      alt: "AAMEX® product distribution banner",
       facts: [
         "Multiple battery formats under one brand story",
         "Visual catalog support for digital presentation",
@@ -111,11 +111,11 @@ window.AAMEX_CONTENT = {
   contact: [
     {
       label: "Contact Us",
-      title: "Reach Bethel Agencies for AAMEX battery sales and product guidance.",
+      title: "Reach Bethel Agencies for AAMEX® battery sales and product guidance.",
       lead:
         "Use the details below or the enquiry form to start a conversation about inverter batteries, solar-ready solutions, automotive batteries, bike batteries, or the inverter unit lineup.",
       image: "./site-images/contact-banner-logo.png",
-      alt: "AAMEX contact banner",
+      alt: "AAMEX® contact banner",
       actions: [
         { label: "Open WhatsApp", href: "https://wa.me/919400124729", external: true },
         { label: "Explore Products", href: "./product.html", variant: "ghost" },
@@ -128,7 +128,7 @@ window.AAMEX_CONTENT = {
       lead:
         "Whether the requirement is inverter backup, solar-ready storage, vehicle use, or bike battery replacement, the contact page is set up to move visitors quickly from browsing to enquiry.",
       image: "./site-images/product-banner-logo.png",
-      alt: "AAMEX enquiry support banner",
+      alt: "AAMEX® enquiry support banner",
       actions: [
         { label: "Send Enquiry", href: "#contact-form" },
         { label: "Call Customer Care", href: "tel:+919400124729", variant: "ghost" },
@@ -141,7 +141,7 @@ window.AAMEX_CONTENT = {
       lead:
         "The contact experience highlights the distributor location, direct call numbers, and a fast enquiry route so visitors can move from the hero banner into a real product conversation without extra steps.",
       image: "./site-images/about-banner-logo.png",
-      alt: "AAMEX dealer support banner",
+      alt: "AAMEX® dealer support banner",
       actions: [
         { label: "View About Page", href: "./about.html" },
         { label: "See Catalog", href: "./product.html", variant: "ghost" },
@@ -152,11 +152,11 @@ window.AAMEX_CONTENT = {
   product: [
     {
       label: "Catalog",
-      title: "AAMEX product families built for backup, mobility, and everyday power confidence.",
+      title: "AAMEX® product families built for backup, mobility, and everyday power confidence.",
       lead:
         "This page organizes the shared product details into a cleaner digital catalog: spotlight families first, then tubular warranty models, automotive sizes, and bike battery references.",
       image: "./site-images/product-banner-logo.png",
-      alt: "AAMEX product banner",
+      alt: "AAMEX® product banner",
       chips: ["UPS & inverter", "Solar-ready", "Automotive", "Bike batteries"],
     },
     {
@@ -165,7 +165,7 @@ window.AAMEX_CONTENT = {
       lead:
         "The tubular model section connects Alpha Regal, Beta Legend, Gamma Stellar, Silver Epic, Gold Grande, Diamond Verita, Platinum Eterna, Signature Plus, and Everlast Pro into one organized web catalog.",
       image: "./site-images/catalog-banner-alt.png",
-      alt: "AAMEX tubular and solar catalog banner",
+      alt: "AAMEX® tubular and solar catalog banner",
       chips: ["Alpha Regal", "Diamond Verita", "Signature Plus", "Everlast Pro"],
     },
     {
@@ -174,7 +174,7 @@ window.AAMEX_CONTENT = {
       lead:
         "Automotive sizes and bike battery models are shown alongside the tubular lineup so visitors can browse by use case, capacity, or warranty without leaving the product page.",
       image: "./site-images/automotive-series.png",
-      alt: "AAMEX automotive range banner",
+      alt: "AAMEX® automotive range banner",
       chips: ["38B20L to AX 1500L", "AX BTZ4 to AX BTLX9L", "Model visuals included"],
     },
   ],
@@ -254,7 +254,7 @@ window.AAMEX_CONTENT = {
   },
   {
     slug: "inverter-unit",
-    name: "AAMEX Inverter Unit",
+    name: "AAMEX® Inverter Unit",
     category: "Home backup companion",
     summary:
       "Compact inverter profile presented as a clean companion product with a modern form factor and 30 months warranty.",
@@ -262,7 +262,7 @@ window.AAMEX_CONTENT = {
     warranty: "30 months warranty",
     image: "./site-images/inverter-render.png",
     imageClass: "focus-inverter",
-    bullets: ["Compact body", "Pairs with AAMEX batteries", "Modern backup companion"],
+    bullets: ["Compact body", "Pairs with AAMEX® batteries", "Modern backup companion"],
   },
   ],
 
