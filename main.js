@@ -20,7 +20,7 @@ const navItems = [
 ];
 
 const pageKey = document.body.dataset.page;
-const logoPath = "./site-images/aamex-logo.png";
+const logoPath = "./site-images/aamex-logo1.svg";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function renderHeader() {
@@ -89,6 +89,10 @@ function renderFooter() {
 
 function normalizePhone(phone) {
   return phone.replace(/[^\d+]/g, "");
+}
+
+function isLogoAsset(path = "") {
+  return path.toLowerCase().endsWith(".svg");
 }
 
 function renderMarquee() {
@@ -180,19 +184,21 @@ function renderHeroSlider() {
           <div class="hero__visual">
             <div class="hero-slider__visual-track">
               ${slides
-                .map(
-                  (slide, index) => `
+                .map((slide, index) => {
+                  const mediaClass = isLogoAsset(slide.image) ? " media-frame--logo" : "";
+
+                  return `
                     <figure
                       class="hero-visual-slide${index === 0 ? " is-active" : ""}"
                       data-hero-visual-slide
                       aria-hidden="${index === 0 ? "false" : "true"}"
                     >
-                      <div class="media-frame panel">
+                      <div class="media-frame panel${mediaClass}">
                         <img src="${slide.image}" alt="${slide.alt}" loading="${index === 0 ? "eager" : "lazy"}" />
                       </div>
                     </figure>
-                  `
-                )
+                  `;
+                })
                 .join("")}
             </div>
           </div>
@@ -452,10 +458,12 @@ function renderGallery(selector, items = brochureGallery) {
   if (!mount) return;
 
   mount.innerHTML = items
-    .map(
-      (item, index) => `
+    .map((item, index) => {
+      const mediaClass = isLogoAsset(item.image) ? " gallery-card__media--logo" : "";
+
+      return `
         <article class="gallery-card panel" data-reveal style="transition-delay:${index * 90}ms">
-          <div class="gallery-card__media">
+          <div class="gallery-card__media${mediaClass}">
             <img src="${item.image}" alt="${item.title}" loading="lazy" />
           </div>
           <div class="gallery-card__body">
@@ -464,8 +472,8 @@ function renderGallery(selector, items = brochureGallery) {
             <p>${item.text}</p>
           </div>
         </article>
-      `
-    )
+      `;
+    })
     .join("");
 }
 
@@ -485,6 +493,48 @@ function renderContactDetails() {
       `
     )
     .join("");
+}
+
+function initPreloader() {
+  const preloader = document.querySelector("[data-page-preloader]");
+  if (!preloader) return;
+
+  let isClosed = false;
+  const minimumDuration = prefersReducedMotion ? 0 : 2000;
+  const cleanupDelay = prefersReducedMotion ? 80 : 320;
+
+  const closePreloader = () => {
+    if (isClosed) return;
+
+    isClosed = true;
+    document.body.classList.remove("is-preloading");
+    preloader.classList.add("is-hidden");
+
+    window.setTimeout(() => {
+      preloader.setAttribute("aria-hidden", "true");
+      preloader.remove();
+    }, cleanupDelay);
+  };
+
+  const queueClose = () => {
+    const remaining = Math.max(0, minimumDuration - performance.now());
+    window.setTimeout(closePreloader, remaining);
+  };
+
+  if (document.readyState === "complete") {
+    queueClose();
+    return;
+  }
+
+  window.addEventListener(
+    "load",
+    () => {
+      queueClose();
+    },
+    { once: true }
+  );
+
+  window.setTimeout(queueClose, minimumDuration + 3200);
 }
 
 function initObserver() {
@@ -563,12 +613,61 @@ function initForm() {
   if (!form) return;
 
   const message = form.querySelector("[data-form-message]");
+  const captchaChallenge = form.querySelector("[data-captcha-challenge]");
+  const captchaInput = form.querySelector("[data-captcha-input]");
+  const captchaRefresh = form.querySelector("[data-captcha-refresh]");
+
+  const setFormMessage = (text, type) => {
+    message.textContent = text;
+    message.classList.remove("is-error", "is-success");
+    message.classList.add("is-visible");
+    if (type) message.classList.add(type);
+  };
+
+  const buildCaptcha = () => {
+    const first = Math.floor(Math.random() * 8) + 2;
+    const second = Math.floor(Math.random() * 7) + 2;
+
+    if (Math.random() > 0.45) {
+      return {
+        prompt: `${first} + ${second} = ?`,
+        answer: String(first + second),
+      };
+    }
+
+    return {
+      prompt: `${first + second} - ${first} = ?`,
+      answer: String(second),
+    };
+  };
+
+  const refreshCaptcha = () => {
+    if (!captchaChallenge || !captchaInput) return;
+    const captcha = buildCaptcha();
+    captchaChallenge.textContent = `Answer this: ${captcha.prompt}`;
+    form.dataset.captchaAnswer = captcha.answer;
+    captchaInput.value = "";
+  };
+
+  captchaRefresh?.addEventListener("click", refreshCaptcha);
+  refreshCaptcha();
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    message.textContent =
-      "Thanks. The enquiry form layout is ready and can be connected to your email or CRM in the next step.";
-    message.classList.add("is-visible");
+
+    if (captchaInput && captchaInput.value.trim() !== form.dataset.captchaAnswer) {
+      setFormMessage("Please solve the CAPTCHA correctly before submitting.", "is-error");
+      refreshCaptcha();
+      captchaInput?.focus();
+      return;
+    }
+
+    setFormMessage(
+      "Thanks. CAPTCHA verified. The enquiry form layout is ready and can be connected to your email or CRM in the next step.",
+      "is-success"
+    );
     form.reset();
+    refreshCaptcha();
   });
 }
 
@@ -807,6 +906,7 @@ function boot() {
   renderGallery("[data-product-gallery]");
   renderGallery("[data-about-gallery]", brochureGallery.slice(0, 3));
   renderContactDetails();
+  initPreloader();
 
   initObserver();
   initTilt();

@@ -349,22 +349,22 @@ window.AAMEX_CONTENT = {
   {
     title: "Homepage hero render",
     text: "A custom hero composition with premium battery staging, warm lighting, and clean negative space for strong web copy.",
-    image: "./site-images/hero-banner-logo.png",
+    image: "./site-images/aamex-logo1.svg",
   },
   {
     title: "Product lineup render",
     text: "A cleaner digital catalog visual built around a grouped battery lineup and compact inverter unit.",
-    image: "./site-images/product-banner-logo.png",
+    image: "./site-images/aamex-logo1.svg",
   },
   {
     title: "Manufacturing story render",
     text: "An about-page visual focused on product reliability, engineering, and a premium industrial mood.",
-    image: "./site-images/about-banner-logo.png",
+    image: "./site-images/aamex-logo1.svg",
   },
   {
     title: "Contact support render",
     text: "A calm product-forward banner designed to support readable contact information and clear enquiry actions.",
-    image: "./site-images/contact-banner-logo.png",
+    image: "./site-images/aamex-logo1.svg",
   },
   ],
 };

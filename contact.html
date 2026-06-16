@@ -8,6 +8,25 @@
       name="description"
       content="Contact AAMEX and Bethel Agencies for product enquiries, battery matching, and support on shared catalog ranges."
     />
+    <link rel="canonical" href="https://www.aamex.in/contact.html" />
+    <meta name="theme-color" content="#b81623" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AAMEX" />
+    <meta property="og:title" content="Contact AAMEX | Strength to Excel" />
+    <meta
+      property="og:description"
+      content="Contact AAMEX and Bethel Agencies for product enquiries, battery matching, and support on shared catalog ranges."
+    />
+    <meta property="og:url" content="https://www.aamex.in/contact.html" />
+    <meta property="og:image" content="https://www.aamex.in/site-images/aamex-logo.png" />
+    <meta property="og:image:alt" content="AAMEX logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact AAMEX | Strength to Excel" />
+    <meta
+      name="twitter:description"
+      content="Contact AAMEX and Bethel Agencies for product enquiries, battery matching, and support on shared catalog ranges."
+    />
+    <meta name="twitter:image" content="https://www.aamex.in/site-images/aamex-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -73,6 +92,24 @@
                   placeholder="Tell us the application, backup need, or model range you are looking for."
                 ></textarea>
               </label>
+              <div class="captcha-block">
+                <span>Solve CAPTCHA</span>
+                <p class="captcha-box" data-captcha-challenge aria-live="polite"></p>
+                <div class="captcha-row">
+                  <input
+                    type="text"
+                    name="captcha"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    placeholder="Enter the answer"
+                    required
+                    data-captcha-input
+                  />
+                  <button class="button button--ghost button--captcha" type="button" data-captcha-refresh>
+                    Refresh
+                  </button>
+                </div>
+              </div>
               <button class="button" type="submit">Submit enquiry</button>
               <p class="form-message" data-form-message></p>
             </form>
